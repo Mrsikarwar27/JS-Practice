@@ -42,3 +42,33 @@
 // }
 
 //===========================================================
+
+/*
+'abcdef'
+'123'
+=>  a1b2c3def
+
+'abc'
+'123456'
+=>  a1b2c3456
+
+*/
+
+
+console.log(merge("abcdef", "123"));
+console.log(merge("abc", "123456"));
+
+
+function merge(a, b) {
+    let m = Math.min(a.length, b.length);
+    let temp = " "
+    let i;
+
+    for (i=0; i < m; i++) {
+        temp = temp + a[i] + b[i]
+    }
+    return temp + a.slice(i) + b.slice(i)
+
+}
+
+//===========================================================
